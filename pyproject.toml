@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow-guard"
+version = "0.1.0"
+description = "Lightweight asynchronous rate-limiting and circuit breaker toolkit for Python microservices"
+readme = "README.md"
+authors = [{ name = "KIPEN66", email = "355400256+KIPEN66@users.noreply.github.com" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
